@@ -4,8 +4,8 @@ var mazeArray = [];
 var mapSizex = 15;
 var mapSizey = 15;
 
-/*
 
+/*
 class Tile{
   
   var north, south, east, west;
@@ -39,7 +39,6 @@ class Tile{
 */
 /**Generate a maze using the JDP spanning tree algorithm represented by a two dimensional array */
 function generateMaze(){
-  console.log("Hello there");
   for(i = 0; i<mapSizex;i++){
     mazeArray[i]=[];
     for(x = 0; x<mapSizey;x++){
@@ -51,6 +50,7 @@ function generateMaze(){
 
 
   console.log(mazeArray);
+  chooseStartAndEnd();
 
 }
 
@@ -58,7 +58,8 @@ function generateMaze(){
 
 function chooseStartAndEnd(){
   var startingSide = Math.random()*3;
-  var start;//the location of the starting node
+  var start_x;//the x coordinate of the starting node
+  var start_y;//the y coordinate of the starting node
   var exitSide;
   var exit;//the location of the exit node
   do{
@@ -66,15 +67,14 @@ function chooseStartAndEnd(){
   }while(exitSide==startingSide);
 
 
-  switch(startingSide){//0 is the west wall of the side, 1 is the north side, 2 is the east side, 3 is the south side
-  case 0:
-  console.log("Hello World!");
-  break;
-  case 1: console.log("Howdy");
-  break;
-  case 2: console.log("Buddy");
-  case 3: console.log("Jesse");
+  if(startingSide ==0){
+    start = Math.random()*mazeArray[0].length;
   }
+  else if(startingSide == 1){
+
+  }
+
+  
 
 
 }
