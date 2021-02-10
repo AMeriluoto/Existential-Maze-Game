@@ -1,0 +1,13 @@
+.text{
+  font-size: 5vh;
+  color: gray;
+  font-family: 'Trebuchet MS';
+}
+
+.Title{
+  font-size: 10vh;
+  color: green;
+  font-family: 'Trebuchet MS';
+  text-align: center;
+
+}
